@@ -91,13 +91,12 @@ border-top:1px solid #015DE6;color:#fff;text-shadow:0 1px 1px #333;}
 #sidebar .content .nav a .info {background: #E20000;border: 1px solid #C00;border-radius: 100%;box-shadow:0 1px 1px #999;color: white;font-size: 12px;display: block;padding: 1px 5px;}
 #sidebar .content p {color:#4C536C;font-size:14px;padding:10px;text-shadow:0 1px 1px #ccc;}
 
-.col_longtype {visibility: collapse !important; }
-.col_power {visibility: collapse !important; }
-
 /* All portable */
 @media only screen and (max-device-width: 1024px) {
 	#sidebar {overflow:scroll;} /* Sidebar is only scrollable in portable devices, you can change that */
 }
+
+
 /* iPhone */
 @media only screen and (max-width: 768px) {
 	#sidebar {display:none;}
@@ -108,8 +107,13 @@ border-top:1px solid #015DE6;color:#fff;text-shadow:0 1px 1px #333;}
 	#main .content p input[type=text],
 	#main .content p input[type=password],
 	#main .content p select {width:60%;}
-	.col_description {visibility: collapse !important; }
-	#invis_header { display: none !important;}
+	#iphone_btn { display: block;}
 }
 
+/* Custom, for the Component Engine: */
+#iphone_btn { display: none; text-align: center !important; }
+#search_btn { width: 75% !important;}
+.col_longtype {visibility: collapse !important; }
+.col_power {visibility: collapse !important; }
+.col_description { visibility: visible; }
 

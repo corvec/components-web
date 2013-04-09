@@ -39,6 +39,9 @@ firstname dot lastname @ gmail dot com
 		<label for="search">Search</label>
 		<input type="text" id="search" value="" onKeyUp="return action_filter()"/>
 	</p>
+	<p id="iphone_btn">
+		<input type="submit" value="Search" id="search_btn" onclick="return action_filter()" />
+	</p>
 
 <table id='component_outer_table'>
 	<col class="col_none"/>
@@ -47,9 +50,9 @@ firstname dot lastname @ gmail dot com
 	<col class="col_power" style="visibility: collapse;"/>
 	<col class="col_shorttype"/>
 	<col class="col_name"/>
-	<col class="col_description"/>
+	<col class="col_description" style="visibility: collapse;"/>
 	<thead><tr>
-		<th id='invis_header'></th>
+		<th></th>
 		<th>ID</th>
 		<th colspan="2">Type</th>
 		<th>Type</th>
