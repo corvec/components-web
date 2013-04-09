@@ -1,3 +1,22 @@
+$(window).bind("load", function() {
+	// var table = document.getElementById('component_outer_table');
+	// table.getElementsByTagName('col')[5].style.visibility="collapse";
+
+	// set row onclick event:
+	var rows = document.getElementsByTagName('tr');
+	for (var i = 1; i < rows.length; i++) {
+		var data =rows[i].children[6].textContent;
+		rows[i].onclick = function(data) {
+			return function() {
+				// if (document.getElementById('invis_header').hidden) {
+					alert(data); 
+				// }
+			};
+		}(data);
+	}
+});
+
+
 // This is the action that is called onKeyUp
 function action_filter() {
 	var filter_criteria = {};
@@ -32,6 +51,7 @@ function filter_document(search) {
 		'4':4
 	};
 	
+	var col_max = $('#component_table tr')[0].childNodes.length;
 	$('#component_table').children().each(function() {
 		var row = $(this);
 		var hidden = false;
@@ -50,7 +70,7 @@ function filter_document(search) {
 					}
 				}
 			} else {
-				for (var j = 1; j <= 5; j++) {
+				for (var j = 1; j < col_max; j++) {
 					if (row.children()[j].textContent.toLowerCase().contains(crit)) {
 						filter_success = true;
 						break;
