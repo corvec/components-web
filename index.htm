@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="components.css" />
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" /><!-- hide top bar in mobile safari-->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>Component Engine</title>
+<!--
+Component Engine
+Web Edition
+Copyright 2013 by Corey T Kump
+
+Contact me at: 
+firstname dot lastname @ gmail dot com
+-->
+
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="components.js"></script>
+
+</head>
+
+<body>
+<div id="wrap">
+<div id="main">
+
+<div class="header">
+	<h1 class="title">Component Engine</h1>
+</div>
+
+<div class="content">
+<h2 class="title">Search For Components</h2>
+
+<div id="search_div" class="box-white">
+	<p>
+		<label for="search">Search</label>
+		<input type="text" id="search" value="" onKeyUp="return action_filter()"/>
+	</p>
+
+<table>
+	<thead><tr>
+		<th></th>
+		<th>ID</th>
+		<th>Type</th>
+		<th>Power</th>
+		<th>Short Name</th>
+		<th>Long Name</th>
+	</tr></thead>
+	<tbody id="component_table">
+		<!-- %s/\v^(\w*)\t([^\t]*)\t([^\t]*)\t(\w*)\t(\w*)/<tr><td>\1<\/td><td>\2<\/td><td>\3<\/td><td>\4<\/td><td>\5<\/td><\/tr> -->
+		<!-- %s/\v^(\w*)\t([^\t]*)\t([^\t]*)\t(\w*)\t(\w*)/<tr><td><\/td><td>\1<\/td><td>\4<\/td><td>\5<\/td><td>\2<\/td><td>\3<\/td><\/tr> -->
+<tr><td></td><td>C11101</td><td>Creation</td><td>1</td><td>Blue Rock</td><td>Blue Quartz</td></tr>
+<tr><td></td><td>C11102</td><td>Elemental</td><td>1</td><td>Pink Rock</td><td>Rose Quartz</td></tr>
+<tr><td></td><td>C11103</td><td>Spirit</td><td>1</td><td>Clear Rock</td><td>Clear Quartz</td></tr>
+<tr><td></td><td>C11104</td><td>Power</td><td>1</td><td>Black Rock</td><td>Obsidian</td></tr>
+<tr><td></td><td>C11201</td><td>Strengthening</td><td>1</td><td>Tan Rock</td><td>Limestone</td></tr>
+<tr><td></td><td>C11202</td><td>Creation</td><td>1</td><td>Sand Dollar</td><td>Sand Dollar</td></tr>
+<tr><td></td><td>C11203</td><td>Elemental</td><td>1</td><td>Tan Rock</td><td>Sandstone</td></tr>
+<tr><td></td><td>C11204</td><td>Elemental</td><td>1</td><td>Black Rock</td><td>Onyx</td></tr>
+<tr><td></td><td>C11301</td><td>Elemental</td><td>1</td><td>Grey Rock</td><td>Granite</td></tr>
+<tr><td></td><td>C11302</td><td>Elemental</td><td>1</td><td>Dirt-filled Pouch</td><td>Dirt from a Crossroads</td></tr>
+<tr><td></td><td>C12101</td><td>Time</td><td>1</td><td>Vial of Gas</td><td>Swamp Gas</td></tr>
+<tr><td></td><td>C13201</td><td>Strengthening</td><td>1</td><td>Gold & Black Stone</td><td>Iron Pyrite</td></tr>
+<tr><td></td><td>C13202</td><td>Time</td><td>1</td><td>Red Iron</td><td>Rusty Iron</td></tr>
+<tr><td></td><td>C13401</td><td>Power</td><td>1</td><td>Gold Key</td><td>Gold Key</td></tr>
+<tr><td></td><td>C13501</td><td>Power</td><td>1</td><td>Iron Knife</td><td>Iron Knife</td></tr>
+<tr><td></td><td>C13502</td><td>Strengthening</td><td>1</td><td>Iron Hoop</td><td>Iron Hoop</td></tr>
+<tr><td></td><td>C14101</td><td>Power</td><td>1</td><td>Orange & Black Stone</td><td>Tiger Eye</td></tr>
+<tr><td></td><td>C15301</td><td>Void</td><td>1</td><td>Vial of Acid</td><td>Vitriol</td></tr>
+<tr><td></td><td>C21101</td><td>Power</td><td>1</td><td>Large Feather</td><td>Hawk Feather</td></tr>
+<tr><td></td><td>C21102</td><td>Time</td><td>1</td><td>Large Feather</td><td>Owl Feather</td></tr>
+<tr><td></td><td>C21201</td><td>Power</td><td>1</td><td>Small Feather</td><td>Hummingbird Feather</td></tr>
+<tr><td></td><td>C22201</td><td>Destruction</td><td>1</td><td>Snake Skin</td><td>Skin of a Garden Snake</td></tr>
+<tr><td></td><td>C23201</td><td>Power</td><td>1</td><td>Small Eye</td><td>Newt Eye</td></tr>
+<tr><td></td><td>C23202</td><td>Spirit</td><td>1</td><td>Vial of Blood</td><td>Human Blood</td></tr>
+<tr><td></td><td>C24201</td><td>Creation</td><td>1</td><td>Ladybug</td><td>Ladybug</td></tr>
+<tr><td></td><td>C24301</td><td>Destruction</td><td>1</td><td>Bottled Insects</td><td>Termites</td></tr>
+<tr><td></td><td>C24401</td><td>Power</td><td>1</td><td>Candle</td><td>Beeswax Candle</td></tr>
+<tr><td></td><td>C24402</td><td>Creation</td><td>1</td><td>Small Stinger</td><td>Wasp Stinger</td></tr>
+<tr><td></td><td>C24601</td><td>Power</td><td>1</td><td>Firefly</td><td>Firefly</td></tr>
+<tr><td></td><td>C25101</td><td>Time</td><td>1</td><td>Ornate Pink Shell</td><td>Conch Shell</td></tr>
+<tr><td></td><td>C25102</td><td>Power</td><td>1</td><td>Ornate Grey Shell</td><td>Nautilus Shell</td></tr>
+<tr><td></td><td>C25401</td><td>Creation</td><td>1</td><td>Vial of Ink</td><td>Octopus Ink</td></tr>
+<tr><td></td><td>C25402</td><td>Creation</td><td>1</td><td>Vial of Ink</td><td>Squid Ink</td></tr>
+<tr><td></td><td>C26101</td><td>Power</td><td>1</td><td>Porcupine Quills</td><td>Porcupine Quills</td></tr>
+<tr><td></td><td>C26201</td><td>Void</td><td>1</td><td>Small Leathery Wing</td><td>Bat Wing</td></tr>
+<tr><td></td><td>C26601</td><td>Spirit</td><td>1</td><td>Hoof Fragments</td><td>Horse Hoof Parings</td></tr>
+<tr><td></td><td>C26701</td><td>Spirit</td><td>1</td><td>Large Claws</td><td>Bear Claws</td></tr>
+<tr><td></td><td>C26801</td><td>Creation</td><td>1</td><td>Horn</td><td>Goat Horn</td></tr>
+<tr><td></td><td>C26802</td><td>Elemental</td><td>1</td><td>Gold Cloth</td><td>Gold Cloth (Wool dyed gold)</td></tr>
+<tr><td></td><td>C26803</td><td>Creation</td><td>1</td><td>Vellum</td><td>Vellum</td></tr>
+<tr><td></td><td>C26901</td><td>Power</td><td>1</td><td>Vial of Smelly Oil</td><td>Skunk Musk</td></tr>
+<tr><td></td><td>C26902</td><td>Elemental</td><td>1</td><td>Grey Chitinous Shell</td><td>Armadillo Carapace</td></tr>
+<tr><td></td><td>C26D01</td><td>Power</td><td>1</td><td>Pointed Teeth</td><td>Goblin Teeth</td></tr>
+<tr><td></td><td>C26D02</td><td>Power</td><td>1</td><td>Pointed Teeth</td><td>Orc Teeth</td></tr>
+<tr><td></td><td>C26D03</td><td>Destruction</td><td>1</td><td>Large Pointed Teeth</td><td>Troll Teeth</td></tr>
+<tr><td></td><td>C26D04</td><td>Spirit</td><td>1</td><td>Large Pointed Teeth</td><td>Ogre Teeth</td></tr>
+<tr><td></td><td>C26E01</td><td>Void</td><td>1</td><td>Severed Hand</td><td>Hand of a Thief</td></tr>
+<tr><td></td><td>C26E02</td><td>Creation</td><td>1</td><td>Lock of Hair</td><td>Hair from a Hobling's Foot</td></tr>
+<tr><td></td><td>C31101</td><td>Time</td><td>1</td><td>Acorn</td><td>Acorn</td></tr>
+<tr><td></td><td>C31201</td><td>Creation</td><td>1</td><td>Apple</td><td>Fresh Apple</td></tr>
+<tr><td></td><td>C31401</td><td>Power</td><td>1</td><td>Wand</td><td>Ash Wand</td></tr>
+<tr><td></td><td>C31402</td><td>Time</td><td>1</td><td>Wand</td><td>Oak Wand</td></tr>
+<tr><td></td><td>C31403</td><td>Elemental</td><td>1</td><td>Match</td><td>Match</td></tr>
+<tr><td></td><td>C31701</td><td>Creation</td><td>1</td><td>Garlic Clove</td><td>Garlic Clove</td></tr>
+<tr><td></td><td>C31801</td><td>Spirit</td><td>1</td><td>Silky Threads</td><td>Corn Silk</td></tr>
+<tr><td></td><td>C32101</td><td>Power</td><td>1</td><td>Pine Cone</td><td>Pine Cone</td></tr>
+<tr><td></td><td>C32102</td><td>Power</td><td>1</td><td>Wand</td><td>Pine Wand</td></tr>
+<tr><td></td><td>C34101</td><td>Elemental</td><td>1</td><td>Mushroom</td><td>Poisonous Mushroom</td></tr>
+<tr><td></td><td>C34102</td><td>Creation</td><td>1</td><td>Mushroom</td><td>Edible Mushroom</td></tr>
+<tr><td></td><td>U11101</td><td>Spirit</td><td>1</td><td>Quartz Geode</td><td>Quartz Geode</td></tr>
+<tr><td></td><td>U11102</td><td>Elemental</td><td>1</td><td>Porous Grey Rock</td><td>Pumice from an Active Volcano</td></tr>
+<tr><td></td><td>U11103</td><td>Elemental</td><td>1</td><td>Blue Rock</td><td>Pure Blue Quartz</td></tr>
+<tr><td></td><td>U11104</td><td>Power</td><td>1</td><td>Pink Rock</td><td>Pure Rose Quartz</td></tr>
+<tr><td></td><td>U11201</td><td>Spirit</td><td>1</td><td>Crushed Crystals</td><td>Rock Salt & Lime</td></tr>
+<tr><td></td><td>U11301</td><td>Strengthening</td><td>1</td><td>Grey Rock</td><td>Graphite</td></tr>
+<tr><td></td><td>U11302</td><td>Elemental</td><td>1</td><td>Large gray rock</td><td>Ballast Stone of a Sunken Ship</td></tr>
+<tr><td></td><td>U11501</td><td>Power</td><td>1</td><td>Small Black Sphere</td><td>Black Marble</td></tr>
+<tr><td></td><td>U11601</td><td>Power</td><td>1</td><td>Grey stone w/rune</td><td>Runestone</td></tr>
+<tr><td></td><td>U11602</td><td>Time</td><td>1</td><td>Grey Powder</td><td>Powdered Capstone of a Mage's Tower</td></tr>
+<tr><td></td><td>U12201</td><td>Void</td><td>1</td><td>Vial of Gas</td><td>Flame Vapors</td></tr>
+<tr><td></td><td>U13101</td><td>Void</td><td>1</td><td>Yellow Powder</td><td>Sulfur</td></tr>
+<tr><td></td><td>U13103</td><td>Power</td><td>1</td><td>Yellow-Grey Ashes</td><td>Sulfuric Ash</td></tr>
+<tr><td></td><td>U13201</td><td>Strengthening</td><td>1</td><td>Red Iron</td><td>Red Iron</td></tr>
+<tr><td></td><td>U13202</td><td>Elemental</td><td>1</td><td>Yellow Crystals</td><td>Sulfur Crystals</td></tr>
+<tr><td></td><td>U13401</td><td>Spirit</td><td>1</td><td>Gold Cloth</td><td>Gold Cloth (spun from real gold)</td></tr>
+<tr><td></td><td>U13402</td><td>Elemental</td><td>1</td><td>Thin Sheet of Silver</td><td>Parchment made of Silver</td></tr>
+<tr><td></td><td>U13501</td><td>Time</td><td>1</td><td>Thin Sheet of Iron</td><td>Parchment made of Iron</td></tr>
+<tr><td></td><td>U13502</td><td>Power</td><td>1</td><td>Thin Sheet of Silver</td><td>Kingsilver / Queensilver</td></tr>
+<tr><td></td><td>U13503</td><td>Spirit</td><td>1</td><td>Dagger</td><td>Assassin's Dagger</td></tr>
+<tr><td></td><td>U14101</td><td>Creation</td><td>1</td><td>Red Gem</td><td>Perfect Ruby</td></tr>
+<tr><td></td><td>U14102</td><td>Spirit</td><td>1</td><td>Clear Gem</td><td>Perfect Diamond</td></tr>
+<tr><td></td><td>U14103</td><td>Time</td><td>1</td><td>Blue Gem</td><td>Perfect Sapphire</td></tr>
+<tr><td></td><td>U14104</td><td>Power</td><td>1</td><td>Blue Gem w/White ctr</td><td>Star Sapphire</td></tr>
+<tr><td></td><td>U14105</td><td>Power</td><td>1</td><td>Orange Gem</td><td>Perfect Topaz</td></tr>
+<tr><td></td><td>U14201</td><td>Time</td><td>1</td><td>Glittery Dust</td><td>Diamond Dust</td></tr>
+<tr><td></td><td>U15101</td><td>Creation</td><td>1</td><td>Vial of Liquid</td><td>Moondrops (water of moonlit lake)</td></tr>
+<tr><td></td><td>U15102</td><td>Spirit</td><td>1</td><td>Vial of Liquid</td><td>Water from the Lake of Sighs</td></tr>
+<tr><td></td><td>U15201</td><td>Elemental</td><td>1</td><td>Vial of Liquid</td><td>Maelstrom Waters</td></tr>
+<tr><td></td><td>U15202</td><td>Creation</td><td>1</td><td>Sliver of Ice</td><td>Ice from the Crystal Glacier</td></tr>
+<tr><td></td><td>U15301</td><td>Time</td><td>1</td><td>Vial of Liquid</td><td>Water which has never seen daylight</td></tr>
+<tr><td></td><td>U21101</td><td>Creation</td><td>1</td><td>Large Feather</td><td>Golden Eagle Feather</td></tr>
+<tr><td></td><td>U21102</td><td>Time</td><td>1</td><td>Large Feather</td><td>Vulture Feather</td></tr>
+<tr><td></td><td>U21103</td><td>Power</td><td>1</td><td>Large Feather</td><td>Condor Feather</td></tr>
+<tr><td></td><td>U21201</td><td>Power</td><td>1</td><td>Large Feather</td><td>Black Snow Goose Feather</td></tr>
+<tr><td></td><td>U22101</td><td>Creation</td><td>1</td><td>Green Scaly Skin</td><td>Lizard Man Skin</td></tr>
+<tr><td></td><td>U22201</td><td>Creation</td><td>1</td><td>Snake Skin</td><td>Rainbow Rattlesnake Skin</td></tr>
+<tr><td></td><td>U24101</td><td>Destruction</td><td>1</td><td>Small Spider</td><td>Black Widow Spider</td></tr>
+<tr><td></td><td>U24102</td><td>Creation</td><td>1</td><td>Large Spider</td><td>Tarantula</td></tr>
+<tr><td></td><td>U24103</td><td>Creation</td><td>1</td><td>Large Spider</td><td>Trapdoor Spider</td></tr>
+<tr><td></td><td>U24104</td><td>Spirit</td><td>1</td><td>Silky Threads</td><td>Spider Silk</td></tr>
+<tr><td></td><td>U24105</td><td>Elemental</td><td>1</td><td>Thick Black Fluid</td><td>Giant Spider Ichor</td></tr>
+<tr><td></td><td>U24301</td><td>Spirit</td><td>1</td><td>Bottled Insects</td><td>Fire Ants</td></tr>
+<tr><td></td><td>U24401</td><td>Elemental</td><td>1</td><td>Small Stinger</td><td>Red Wasp Stinger</td></tr>
+<tr><td></td><td>U24402</td><td>Power</td><td>1</td><td>Small Stinger</td><td>Queen Bee Stinger</td></tr>
+<tr><td></td><td>U24501</td><td>Power</td><td>1</td><td>Scorpion Tail</td><td>Scorpion Tail</td></tr>
+<tr><td></td><td>U24601</td><td>Time</td><td>1</td><td>Cocoon</td><td>Poisonous Butterfly Cocoon</td></tr>
+<tr><td></td><td>U25301</td><td>Elemental</td><td>1</td><td>Snail-like Shell</td><td>Barnacle from an Albino Whale</td></tr>
+<tr><td></td><td>U25401</td><td>Creation</td><td>1</td><td>Vial of Ink</td><td>Kraken Ink</td></tr>
+<tr><td></td><td>U25402</td><td>Elemental</td><td>1</td><td>Large Tentacle</td><td>Giant Squid Tentacle</td></tr>
+<tr><td></td><td>U25501</td><td>Creation</td><td>1</td><td>Jellyfish</td><td>Jellyfish</td></tr>
+<tr><td></td><td>U26101</td><td>Destruction</td><td>1</td><td>Porcupine Quills</td><td>Black Porcupine Quills</td></tr>
+<tr><td></td><td>U26501</td><td>Elemental</td><td>1</td><td>Horn</td><td>Horn of a White Bull</td></tr>
+<tr><td></td><td>U26502</td><td>Creation</td><td>1</td><td>Lock of Hair</td><td>Hair of a Musk Ox</td></tr>
+<tr><td></td><td>U26701</td><td>Power</td><td>1</td><td>Large Claws</td><td>Claws of a Cave Bear</td></tr>
+<tr><td></td><td>U26901</td><td>Power</td><td>1</td><td>Vial of Smelly Liquid</td><td>Giant Skunk Musk</td></tr>
+<tr><td></td><td>U26E01</td><td>Creation</td><td>1</td><td>Horn</td><td>Narwhal Horn</td></tr>
+<tr><td></td><td>U26E02</td><td>Creation</td><td>1</td><td>Bones</td><td>Knucklebones of a Sea Troll</td></tr>
+<tr><td></td><td>U27101</td><td>Creation</td><td>1</td><td>Purple/Orange Sponge</td><td>Purple and Orange Sponge</td></tr>
+<tr><td></td><td>U27201</td><td>Power</td><td>1</td><td>Lump of Coral</td><td>Brain Coral</td></tr>
+<tr><td></td><td>U27202</td><td>Power</td><td>1</td><td>Lump of Coral</td><td>Fire Coral</td></tr>
+<tr><td></td><td>U27203</td><td>Power</td><td>1</td><td>Lump of Coral</td><td>Red Coral</td></tr>
+<tr><td></td><td>U28101</td><td>Power</td><td>1</td><td>Large Pointed Teeth</td><td>Shark Teeth</td></tr>
+<tr><td></td><td>U28102</td><td>Destruction</td><td>1</td><td>Pointed Teeth</td><td>Piranha Teeth</td></tr>
+<tr><td></td><td>U28103</td><td>Power</td><td>1</td><td>Pointed Teeth</td><td>Barracuda Teeth</td></tr>
+<tr><td></td><td>U28104</td><td>Power</td><td>1</td><td>Pointed Teeth</td><td>Moray Eel Teeth</td></tr>
+<tr><td></td><td>U28201</td><td>Spirit</td><td>1</td><td>Pearl</td><td>Perfect Pearl</td></tr>
+<tr><td></td><td>U28202</td><td>Time</td><td>1</td><td>Small Black Sphere</td><td>Black Pearl</td></tr>
+<tr><td></td><td>U28203</td><td>Power</td><td>1</td><td>Orange Gem</td><td>Perfect Carnelian</td></tr>
+<tr><td></td><td>U31101</td><td>Time</td><td>1</td><td>Acorn</td><td>Acorn from a 100-year-old Oak</td></tr>
+<tr><td></td><td>U31201</td><td>Power</td><td>1</td><td>Apple</td><td>Apple from a Pippin Fairy's Tree</td></tr>
+<tr><td></td><td>U31301</td><td>Time</td><td>1</td><td>Vial - Cloudy Liquid</td><td>Dregs of 1000-year-old Elven Wine</td></tr>
+<tr><td></td><td>U31401</td><td>Elemental</td><td>1</td><td>Wand</td><td>Wand of Lightning-Struck Oak</td></tr>
+<tr><td></td><td>U31402</td><td>Void</td><td>1</td><td>Vial of Liquid</td><td>Curare</td></tr>
+<tr><td></td><td>U31403</td><td>Creation</td><td>1</td><td>Match</td><td>Match Made in Haven</td></tr>
+<tr><td></td><td>U31404</td><td>Creation</td><td>1</td><td>Root</td><td>Taproot of a Giant Sequoia</td></tr>
+<tr><td></td><td>U31501</td><td>Void</td><td>1</td><td>Ashes</td><td>Ash of an Earth Formal Scroll</td></tr>
+<tr><td></td><td>U31502</td><td>Destruction</td><td>1</td><td>Ashes</td><td>Ash of an Celestial Formal Scroll</td></tr>
+<tr><td></td><td>U32101</td><td>Spirit</td><td>1</td><td>Insect in Amber</td><td>Amber with Trapped Insect</td></tr>
+<tr><td></td><td>U34201</td><td>Time</td><td>1</td><td>Moss</td><td>Moss from a Mummy's Tomb</td></tr>
+<tr><td></td><td>U34202</td><td>Time</td><td>1</td><td>Spores</td><td>Spores of a Winter Mushroom</td></tr>
+<tr><td></td><td>U34203</td><td>Power</td><td>1</td><td>Spores</td><td>Spores of Red Cave Fungus</td></tr>
+<tr><td></td><td>U34301</td><td>Spirit</td><td>1</td><td>Moss</td><td>Phosphorescent Moss</td></tr>
+<tr><td></td><td>U35001</td><td>Creation</td><td>1</td><td>Root</td><td>Ginseng Root</td></tr>
+<tr><td></td><td>U35002</td><td>Void</td><td>1</td><td>Root</td><td>Nightshade Root</td></tr>
+<tr><td></td><td>U35003</td><td>Creation</td><td>1</td><td>Leaves</td><td>Foxglove</td></tr>
+<tr><td></td><td>U35004</td><td>Power</td><td>1</td><td>Leaves</td><td>Wolfsbane</td></tr>
+<tr><td></td><td>R11101</td><td>None</td><td>X</td><td>Large Iron Statue</td><td>Iron Golem Body</td></tr>
+<tr><td></td><td>R12101</td><td>Void</td><td>2</td><td>Grey Powder</td><td>Mummy Essence</td></tr>
+<tr><td></td><td>R12102</td><td>Spirit</td><td>2</td><td>Vial of Glowing Gas</td><td>Specter Essence</td></tr>
+<tr><td></td><td>R12103</td><td>Time</td><td>2</td><td>Vial of Glowing Gas</td><td>Wraith Essence</td></tr>
+<tr><td></td><td>R12201</td><td>Power</td><td>2</td><td>Bones</td><td>Death Knight Bones</td></tr>
+<tr><td></td><td>R12202</td><td>Time</td><td>2</td><td>Ashes</td><td>Greater Vampire Ashes</td></tr>
+<tr><td></td><td>R21101</td><td>Elemental</td><td>2</td><td>Vial of Glowing Gas</td><td>Lesser Fire Elemental Essence</td></tr>
+<tr><td></td><td>R21102</td><td>Elemental</td><td>2</td><td>Vial of Liquid</td><td>Lesser Water Elemental Essence</td></tr>
+<tr><td></td><td>R21103</td><td>Elemental</td><td>2</td><td>Vial of Gas</td><td>Lesser Air Elemental Essence</td></tr>
+<tr><td></td><td>R21104</td><td>Elemental</td><td>2</td><td>Black Powder</td><td>Lesser Earth Elemental Essence</td></tr>
+<tr><td></td><td>R21105</td><td>Creation</td><td>2</td><td>Chunk of Brown Rock</td><td>Lesser Earth Elemental Part</td></tr>
+<tr><td></td><td>R21106</td><td>Power</td><td>2</td><td>Large Claws</td><td>Lesser Earth Elemental Claws</td></tr>
+<tr><td></td><td>R21201</td><td>Elemental</td><td>2</td><td>Vial of Glowing Gas</td><td>Greater Fire Elemental Essence</td></tr>
+<tr><td></td><td>R21202</td><td>Elemental</td><td>2</td><td>Vial of Liquid</td><td>Greater Water Elemental Essence</td></tr>
+<tr><td></td><td>R21203</td><td>Elemental</td><td>2</td><td>Vial of Gas</td><td>Greater Air Elemental Essence</td></tr>
+<tr><td></td><td>R21204</td><td>Elemental</td><td>2</td><td>Black Powder</td><td>Greater Earth Elemental Essence</td></tr>
+<tr><td></td><td>R21205</td><td>Destruction</td><td>2</td><td>Thick Black Fluid</td><td>Greater Death Elemental Essence</td></tr>
+<tr><td></td><td>R21206</td><td>Power</td><td>2</td><td>Huge Claws</td><td>Greater Earth Elemental Claws</td></tr>
+<tr><td></td><td>R22101</td><td>Creation</td><td>2</td><td>Scale</td><td>Dragon Scale</td></tr>
+<tr><td></td><td>R22102</td><td>Creation</td><td>2</td><td>Large Feather</td><td>Roc Feather</td></tr>
+<tr><td></td><td>R22103</td><td>Creation</td><td>2</td><td>Hoof Fragments</td><td>Unicorn Hoof Parings</td></tr>
+<tr><td></td><td>R22104</td><td>Time</td><td>2</td><td>Small Feather</td><td>Cockatrice Feather</td></tr>
+<tr><td></td><td>R22105</td><td>Power</td><td>2</td><td>Large Feather</td><td>Phoenix Feather</td></tr>
+<tr><td></td><td>R22106</td><td>Spirit</td><td>2</td><td>Horn</td><td>Unicorn Horn</td></tr>
+<tr><td></td><td>R22107</td><td>Creation</td><td>2</td><td>Bird Talons</td><td>Phoenix Talons</td></tr>
+<tr><td></td><td>R22108</td><td>Creation</td><td>2</td><td>Huge Claws</td><td>Dragon Claws</td></tr>
+<tr><td></td><td>R22109</td><td>Elemental</td><td>2</td><td>Large Tentacle</td><td>Kraken Tentacle</td></tr>
+<tr><td></td><td>R2210A</td><td>Creation</td><td>2</td><td>Lock of Hair</td><td>Lock of a Mermaid's Hair</td></tr>
+<tr><td></td><td>R2210B</td><td>Power</td><td>2</td><td>Small Feather</td><td>Pin Feather of a Pegasus</td></tr>
+<tr><td></td><td>R2210C</td><td>Creation</td><td>2</td><td>Hoof Fragments</td><td>Pegasus Hoof Parings</td></tr>
+<tr><td></td><td>R2210D</td><td>Power</td><td>2</td><td>Huge Claws</td><td>Gryphon Claws</td></tr>
+<tr><td></td><td>R22110</td><td>Power</td><td>2</td><td>Vial of Blood</td><td>Blood of a Black Unicorn</td></tr>
+<tr><td></td><td>R22111</td><td>Void</td><td>2</td><td>Vial of Blood</td><td>Blood from the Heart of a Coward</td></tr>
+<tr><td></td><td>R24401</td><td>Creation</td><td>2</td><td>Huge Stinger</td><td>Brood Executioner Stinger</td></tr>
+<tr><td></td><td>R24402</td><td>Power</td><td>2</td><td>Vial of Acid</td><td>Brood Warrior Acid</td></tr>
+<tr><td></td><td>R24403</td><td>Spirit</td><td>2</td><td>Huge Stinger</td><td>Brood Warrior Stinger</td></tr>
+<tr><td></td><td>R24404</td><td>Void</td><td>2</td><td>Vial of Acid</td><td>Brood Executioner Acid</td></tr>
+<tr><td></td><td>R24405</td><td>Destruction</td><td>2</td><td>Vial of Acid</td><td>Brood Queen Acid</td></tr>
+<tr><td></td><td>R24406</td><td>Power</td><td>2</td><td>Huge Stinger</td><td>Brood Queen Stinger</td></tr>
+<tr><td></td><td>R25301</td><td>Time</td><td>2</td><td>Grey Chitinous Shell</td><td>Trilobite Shell</td></tr>
+<tr><td></td><td>R31201</td><td>Power</td><td>2</td><td>Red Iron</td><td>Meteoric Iron</td></tr>
+<tr><td></td><td>R31202</td><td>Power</td><td>2</td><td>Red Powder</td><td>Red Phosphorous</td></tr>
+<tr><td></td><td>R31203</td><td>Elemental</td><td>2</td><td>Grey Rock</td><td>Celestial Granite</td></tr>
+<tr><td></td><td>R31204</td><td>Power</td><td>2</td><td>Clear Gem</td><td>Star Diamond</td></tr>
+<tr><td></td><td>R31205</td><td>Creation</td><td>2</td><td>Orange Gem</td><td>Perfect Jacinth</td></tr>
+<tr><td></td><td>R32101</td><td>Time</td><td>2</td><td>Grey Rock</td><td>Shard of a Hero's Tomb</td></tr>
+<tr><td></td><td>R32102</td><td>Void</td><td>2</td><td>Sword</td><td>Sword of a Villain</td></tr>
+<tr><td></td><td>R32103</td><td>Power</td><td>2</td><td>Vial of Glowing Gas</td><td>Ozone from a Fresh Lightning Strike</td></tr>
+<tr><td></td><td>R33101</td><td>Spirit</td><td>2</td><td>Vial of Glowing Gas</td><td>Will o' Wisp Essence</td></tr>
+<tr><td></td><td>R33102</td><td>Power</td><td>2</td><td>Vial of Gas</td><td>Thunder of a Lightning Storm</td></tr>
+<tr><td></td><td>S10001</td><td>Destruction</td><td>4</td><td>Pointed Teeth</td><td>Death Elemental Teeth</td></tr>
+<tr><td></td><td>S10002</td><td>Creation</td><td>4</td><td>Scale</td><td>Life Elemental Scale</td></tr>
+<tr><td></td><td>S10003</td><td>Time</td><td>4</td><td>Vial of Glowing Gas</td><td>Essence of a Falling Star</td></tr>
+<tr><td></td><td>S10004</td><td>Elemental</td><td>4</td><td>Vial of Glowing Gas</td><td>Warmth of Tyrra</td></tr>
+<tr><td></td><td>S10005</td><td>Power</td><td>4</td><td>Vial of Glowing Gas</td><td>Tail of a Comet</td></tr>
+<tr><td></td><td>S10006</td><td>Creation</td><td>4</td><td>White Gem</td><td>The Living Heart of the Moon</td></tr>
+<tr><td></td><td>S10007</td><td>Time</td><td>4</td><td>Grey Powder</td><td>The March of Time</td></tr>
+<tr><td></td><td>S10008</td><td>Spirit</td><td>4</td><td>Vial of Gas</td><td>The Last Breath of a True King</td></tr>
+<tr><td></td><td>S10009</td><td>Void</td><td>4</td><td>Insect in Amber</td><td>The King of the Hive</td></tr>
+<tr><td></td><td>S10010</td><td>Elemental</td><td>4</td><td>Vial of Liquid</td><td>Pure Water from the Blood Glacier</td></tr>
+<tr><td></td><td>S10011</td><td>Spirit</td><td>4</td><td>Lock of Hair</td><td>Lock of a True Hero's Hair</td></tr>
+<tr><td></td><td>S10012</td><td>Power</td><td>4</td><td>Vial of Blood</td><td>The Last Hope of a True Hero</td></tr>
+
+
+
+	</tbody>
+</table>
+
+</div>
+
+</div><!-- content -->
+</div><!-- main -->
+<div id="sidebar">
+<div class="header">
+<h1 class="title">Component Information</h1>
+</div><!-- header -->
+<div class="content">
+<div class="box-white" id="credits">
+<p>This web app was developed by Corey Kump in 2013.
+It utilizes skills from the <a href="http://www.nerolarp.com" target="_nat">NERO LARP</a> game.
+Corey's home chapter is <a href="http://www.neroindy.com" target="_in">NERO Indiana</a>.
+</p>
+<p>This application is released under the terms of the <a href="http://www.gnu.org/licenses">GNU General Public License</a>, version 3.</p>
+</div><!--credits-->
+
+
+</div><!--content-->
+</div><!--sidebar-->
+
+</div><!-- wrap -->
+</body>
+</html>

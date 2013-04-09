@@ -1,0 +1,208 @@
+C11101	Blue Rock	Blue Quartz	Creation	1
+C11102	Pink Rock	Rose Quartz	Elemental	1
+C11103	Clear Rock	Clear Quartz	Spirit	1
+C11104	Black Rock	Obsidian	Power	1
+C11201	Tan Rock	Limestone	Strengthening	1
+C11202	Sand Dollar	Sand Dollar	Creation	1
+C11203	Tan Rock	Sandstone	Elemental	1
+C11204	Black Rock	Onyx	Elemental	1
+C11301	Grey Rock	Granite	Elemental	1
+C11302	Dirt-filled Pouch	Dirt from a Crossroads	Elemental	1
+C12101	Vial of Gas	Swamp Gas	Time	1
+C13201	Gold & Black Stone	Iron Pyrite	Strengthening	1
+C13202	Red Iron	Rusty Iron	Time	1
+C13401	Gold Key	Gold Key	Power	1
+C13501	Iron Knife	Iron Knife	Power	1
+C13502	Iron Hoop	Iron Hoop	Strengthening	1
+C14101	Orange & Black Stone	Tiger Eye	Power	1
+C15301	Vial of Acid	Vitriol	Void	1
+C21101	Large Feather	Hawk Feather	Power	1
+C21102	Large Feather	Owl Feather	Time	1
+C21201	Small Feather	Hummingbird Feather	Power	1
+C22201	Snake Skin	Skin of a Garden Snake	Destruction	1
+C23201	Small Eye	Newt Eye	Power	1
+C23202	Vial of Blood	Human Blood	Spirit	1
+C24201	Ladybug	Ladybug	Creation	1
+C24301	Bottled Insects	Termites	Destruction	1
+C24401	Candle	Beeswax Candle	Power	1
+C24402	Small Stinger	Wasp Stinger	Creation	1
+C24601	Firefly	Firefly	Power	1
+C25101	Ornate Pink Shell	Conch Shell	Time	1
+C25102	Ornate Grey Shell	Nautilus Shell	Power	1
+C25401	Vial of Ink	Octopus Ink	Creation	1
+C25402	Vial of Ink	Squid Ink	Creation	1
+C26101	Porcupine Quills	Porcupine Quills	Power	1
+C26201	Small Leathery Wing	Bat Wing	Void	1
+C26601	Hoof Fragments	Horse Hoof Parings	Spirit	1
+C26701	Large Claws	Bear Claws	Spirit	1
+C26801	Horn	Goat Horn	Creation	1
+C26802	Gold Cloth	Gold Cloth (Wool dyed gold)	Elemental	1
+C26803	Vellum	Vellum	Creation	1
+C26901	Vial of Smelly Oil	Skunk Musk	Power	1
+C26902	Grey Chitinous Shell	Armadillo Carapace	Elemental	1
+C26D01	Pointed Teeth	Goblin Teeth	Power	1
+C26D02	Pointed Teeth	Orc Teeth	Power	1
+C26D03	Large Pointed Teeth	Troll Teeth	Destruction	1
+C26D04	Large Pointed Teeth	Ogre Teeth	Spirit	1
+C26E01	Severed Hand	Hand of a Thief	Void	1
+C26E02	Lock of Hair	Hair from a Hobling's Foot	Creation	1
+C31101	Acorn	Acorn	Time	1
+C31201	Apple	Fresh Apple	Creation	1
+C31401	Wand	Ash Wand	Power	1
+C31402	Wand	Oak Wand	Time	1
+C31403	Match	Match	Elemental	1
+C31701	Garlic Clove	Garlic Clove	Creation	1
+C31801	Silky Threads	Corn Silk	Spirit	1
+C32101	Pine Cone	Pine Cone	Power	1
+C32102	Wand	Pine Wand	Power	1
+C34101	Mushroom	Poisonous Mushroom	Elemental	1
+C34102	Mushroom	Edible Mushroom	Creation	1
+U11101	Quartz Geode	Quartz Geode	Spirit	1
+U11102	Porous Grey Rock	Pumice from an Active Volcano	Elemental	1
+U11103	Blue Rock	Pure Blue Quartz	Elemental	1
+U11104	Pink Rock	Pure Rose Quartz	Power	1
+U11201	Crushed Crystals	Rock Salt & Lime	Spirit	1
+U11301	Grey Rock	Graphite	Strengthening	1
+U11302	Large gray rock	Ballast Stone of a Sunken Ship	Elemental	1
+U11501	Small Black Sphere	Black Marble	Power	1
+U11601	Grey stone w/rune	Runestone	Power	1
+U11602	Grey Powder	Powdered Capstone of a Mage's Tower	Time	1
+U12201	Vial of Gas	Flame Vapors	Void	1
+U13101	Yellow Powder	Sulfur	Void	1
+U13103	Yellow-Grey Ashes	Sulfuric Ash	Power	1
+U13201	Red Iron	Red Iron	Strengthening	1
+U13202	Yellow Crystals	Sulfur Crystals	Elemental	1
+U13401	Gold Cloth	Gold Cloth (spun from real gold)	Spirit	1
+U13402	Thin Sheet of Silver	Parchment made of Silver	Elemental	1
+U13501	Thin Sheet of Iron	Parchment made of Iron	Time	1
+U13502	Thin Sheet of Silver	Kingsilver / Queensilver	Power	1
+U13503	Dagger	Assassin's Dagger	Spirit	1
+U14101	Red Gem	Perfect Ruby	Creation	1
+U14102	Clear Gem	Perfect Diamond	Spirit	1
+U14103	Blue Gem	Perfect Sapphire	Time	1
+U14104	Blue Gem w/White ctr	Star Sapphire	Power	1
+U14105	Orange Gem	Perfect Topaz	Power	1
+U14201	Glittery Dust	Diamond Dust	Time	1
+U15101	Vial of Liquid	Moondrops (water of moonlit lake)	Creation	1
+U15102	Vial of Liquid	Water from the Lake of Sighs	Spirit	1
+U15201	Vial of Liquid	Maelstrom Waters	Elemental	1
+U15202	Sliver of Ice	Ice from the Crystal Glacier	Creation	1
+U15301	Vial of Liquid	Water which has never seen daylight	Time	1
+U21101	Large Feather	Golden Eagle Feather	Creation	1
+U21102	Large Feather	Vulture Feather	Time	1
+U21103	Large Feather	Condor Feather	Power	1
+U21201	Large Feather	Black Snow Goose Feather	Power	1
+U22101	Green Scaly Skin	Lizard Man Skin	Creation	1
+U22201	Snake Skin	Rainbow Rattlesnake Skin	Creation	1
+U24101	Small Spider	Black Widow Spider	Destruction	1
+U24102	Large Spider	Tarantula	Creation	1
+U24103	Large Spider	Trapdoor Spider	Creation	1
+U24104	Silky Threads	Spider Silk	Spirit	1
+U24105	Thick Black Fluid	Giant Spider Ichor	Elemental	1
+U24301	Bottled Insects	Fire Ants	Spirit	1
+U24401	Small Stinger	Red Wasp Stinger	Elemental	1
+U24402	Small Stinger	Queen Bee Stinger	Power	1
+U24501	Scorpion Tail	Scorpion Tail	Power	1
+U24601	Cocoon	Poisonous Butterfly Cocoon	Time	1
+U25301	Snail-like Shell	Barnacle from an Albino Whale	Elemental	1
+U25401	Vial of Ink	Kraken Ink	Creation	1
+U25402	Large Tentacle	Giant Squid Tentacle	Elemental	1
+U25501	Jellyfish	Jellyfish	Creation	1
+U26101	Porcupine Quills	Black Porcupine Quills	Destruction	1
+U26501	Horn	Horn of a White Bull	Elemental	1
+U26502	Lock of Hair	Hair of a Musk Ox	Creation	1
+U26701	Large Claws	Claws of a Cave Bear	Power	1
+U26901	Vial of Smelly Liquid	Giant Skunk Musk	Power	1
+U26E01	Horn	Narwhal Horn	Creation	1
+U26E02	Bones	Knucklebones of a Sea Troll	Creation	1
+U27101	Purple/Orange Sponge	Purple and Orange Sponge	Creation	1
+U27201	Lump of Coral	Brain Coral	Power	1
+U27202	Lump of Coral	Fire Coral	Power	1
+U27203	Lump of Coral	Red Coral	Power	1
+U28101	Large Pointed Teeth	Shark Teeth	Power	1
+U28102	Pointed Teeth	Piranha Teeth	Destruction	1
+U28103	Pointed Teeth	Barracuda Teeth	Power	1
+U28104	Pointed Teeth	Moray Eel Teeth	Power	1
+U28201	Pearl	Perfect Pearl	Spirit	1
+U28202	Small Black Sphere	Black Pearl	Time	1
+U28203	Orange Gem	Perfect Carnelian	Power	1
+U31101	Acorn	Acorn from a 100-year-old Oak	Time	1
+U31201	Apple	Apple from a Pippin Fairy's Tree	Power	1
+U31301	Vial - Cloudy Liquid	Dregs of 1000-year-old Elven Wine	Time	1
+U31401	Wand	Wand of Lightning-Struck Oak	Elemental	1
+U31402	Vial of Liquid	Curare	Void	1
+U31403	Match	Match Made in Haven	Creation	1
+U31404	Root	Taproot of a Giant Sequoia	Creation	1
+U31501	Ashes	Ash of an Earth Formal Scroll	Void	1
+U31502	Ashes	Ash of an Celestial Formal Scroll	Destruction	1
+U32101	Insect in Amber	Amber with Trapped Insect	Spirit	1
+U34201	Moss	Moss from a Mummy's Tomb	Time	1
+U34202	Spores	Spores of a Winter Mushroom	Time	1
+U34203	Spores	Spores of Red Cave Fungus	Power	1
+U34301	Moss	Phosphorescent Moss	Spirit	1
+U35001	Root	Ginseng Root	Creation	1
+U35002	Root	Nightshade Root	Void	1
+U35003	Leaves	Foxglove	Creation	1
+U35004	Leaves	Wolfsbane	Power	1
+R11101	Large Iron Statue	Iron Golem Body	None	X
+R12101	Grey Powder	Mummy Essence	Void	2
+R12102	Vial of Glowing Gas	Specter Essence	Spirit	2
+R12103	Vial of Glowing Gas	Wraith Essence	Time	2
+R12201	Bones	Death Knight Bones	Power	2
+R12202	Ashes	Greater Vampire Ashes	Time	2
+R21101	Vial of Glowing Gas	Lesser Fire Elemental Essence	Elemental	2
+R21102	Vial of Liquid	Lesser Water Elemental Essence	Elemental	2
+R21103	Vial of Gas	Lesser Air Elemental Essence	Elemental	2
+R21104	Black Powder	Lesser Earth Elemental Essence	Elemental	2
+R21105	Chunk of Brown Rock	Lesser Earth Elemental Part	Creation	2
+R21106	Large Claws	Lesser Earth Elemental Claws	Power	2
+R21201	Vial of Glowing Gas	Greater Fire Elemental Essence	Elemental	2
+R21202	Vial of Liquid	Greater Water Elemental Essence	Elemental	2
+R21203	Vial of Gas	Greater Air Elemental Essence	Elemental	2
+R21204	Black Powder	Greater Earth Elemental Essence	Elemental	2
+R21205	Thick Black Fluid	Greater Death Elemental Essence	Destruction	2
+R21206	Huge Claws	Greater Earth Elemental Claws	Power	2
+R22101	Scale	Dragon Scale	Creation	2
+R22102	Large Feather	Roc Feather	Creation	2
+R22103	Hoof Fragments	Unicorn Hoof Parings	Creation	2
+R22104	Small Feather	Cockatrice Feather	Time	2
+R22105	Large Feather	Phoenix Feather	Power	2
+R22106	Horn	Unicorn Horn	Spirit	2
+R22107	Bird Talons	Phoenix Talons	Creation	2
+R22108	Huge Claws	Dragon Claws	Creation	2
+R22109	Large Tentacle	Kraken Tentacle	Elemental	2
+R2210A	Lock of Hair	Lock of a Mermaid's Hair	Creation	2
+R2210B	Small Feather	Pin Feather of a Pegasus	Power	2
+R2210C	Hoof Fragments	Pegasus Hoof Parings	Creation	2
+R2210D	Huge Claws	Gryphon Claws	Power	2
+R22110	Vial of Blood	Blood of a Black Unicorn	Power	2
+R22111	Vial of Blood	Blood from the Heart of a Coward	Void	2
+R24401	Huge Stinger	Brood Executioner Stinger	Creation	2
+R24402	Vial of Acid	Brood Warrior Acid	Power	2
+R24403	Huge Stinger	Brood Warrior Stinger	Spirit	2
+R24404	Vial of Acid	Brood Executioner Acid	Void	2
+R24405	Vial of Acid	Brood Queen Acid	Destruction	2
+R24406	Huge Stinger	Brood Queen Stinger	Power	2
+R25301	Grey Chitinous Shell	Trilobite Shell	Time	2
+R31201	Red Iron	Meteoric Iron	Power	2
+R31202	Red Powder	Red Phosphorous	Power	2
+R31203	Grey Rock	Celestial Granite	Elemental	2
+R31204	Clear Gem	Star Diamond	Power	2
+R31205	Orange Gem	Perfect Jacinth	Creation	2
+R32101	Grey Rock	Shard of a Hero's Tomb	Time	2
+R32102	Sword	Sword of a Villain	Void	2
+R32103	Vial of Glowing Gas	Ozone from a Fresh Lightning Strike	Power	2
+R33101	Vial of Glowing Gas	Will o' Wisp Essence	Spirit	2
+R33102	Vial of Gas	Thunder of a Lightning Storm	Power	2
+S10001	Pointed Teeth	Death Elemental Teeth	Destruction	4
+S10002	Scale	Life Elemental Scale	Creation	4
+S10003	Vial of Glowing Gas	Essence of a Falling Star	Time	4
+S10004	Vial of Glowing Gas	Warmth of Tyrra	Elemental	4
+S10005	Vial of Glowing Gas	Tail of a Comet	Power	4
+S10006	White Gem	The Living Heart of the Moon	Creation	4
+S10007	Grey Powder	The March of Time	Time	4
+S10008	Vial of Gas	The Last Breath of a True King	Spirit	4
+S10009	Insect in Amber	The King of the Hive	Void	4
+S10010	Vial of Liquid	Pure Water from the Blood Glacier	Elemental	4
+S10011	Lock of Hair	Lock of a True Hero's Hair	Spirit	4
+S10012	Vial of Blood	The Last Hope of a True Hero	Power	4
