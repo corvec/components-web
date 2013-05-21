@@ -95,11 +95,12 @@ border-top:1px solid #015DE6;color:#fff;text-shadow:0 1px 1px #333;}
 @media only screen and (max-width: 1024px) {
 	#sidebar {overflow:scroll;} /* Sidebar is only scrollable in portable devices, you can change that */
 	#iphone_btn { display: block; text-align: center !important;}
-	#search_lbl { visibility: collapse; width: 1% !important;  }
-	#search { text-align: left !important; width: 90% !important; }
 	#th_description, tr td:nth-child(6) {display: none; visibility: hidden; }
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+	#search { width: 80% !important; }
+}
 
 /* iPhone */
 @media only screen and (max-width: 768px) {
@@ -113,6 +114,7 @@ border-top:1px solid #015DE6;color:#fff;text-shadow:0 1px 1px #333;}
 	#main .content p select {width:60%;}
 
 	#th_longtype, tr td:nth-child(3), tr td:nth-child(4) {display: none; visibility: hidden; }
+	#search { width: 70% !important; }
 }
 
 @media only screen and (min-width: 769px) {
@@ -121,7 +123,9 @@ border-top:1px solid #015DE6;color:#fff;text-shadow:0 1px 1px #333;}
 
 @media only screen and (min-width: 1025px) {
 	#iphone_btn { display: none; }
+	#search { width: 90% !important; }
 }
 
 /* Custom, for the Component Engine: */
 #search_btn { width: 75% !important;}
+tr td:nth-child(3) {width: 10%;}
