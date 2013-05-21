@@ -5,17 +5,21 @@ $(window).bind("load", function() {
 	// set row onclick event:
 	var rows = document.getElementsByTagName('tr');
 	for (var i = 1; i < rows.length; i++) {
-		var data =rows[i].children[6].textContent;
+		var data =rows[i].children[5].textContent;
 		rows[i].onclick = function(data) {
 			return function() {
-				// if (document.getElementById('invis_header').hidden) {
+				if (screen_width() < 1025) {
 					alert(data); 
-				// }
+				}
 			};
 		}(data);
 	}
 });
 
+function screen_width() {
+	var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+	return width;
+}
 
 // This is the action that is called onKeyUp
 function action_filter() {
