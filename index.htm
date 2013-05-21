@@ -50,18 +50,18 @@ firstname dot lastname @ gmail dot com
 <table id='component_outer_table'>
 	<col class="col_none"/>
 	<col class="col_id"/>
-	<col class="col_longtype" style="visibility: collapse;"/>
-	<col class="col_power" style="visibility: collapse;"/>
+	<col class="col_longtype"/>
+	<col class="col_power"/>
 	<col class="col_name"/>
-	<col class="col_description" style="visibility: collapse;"/>
+	<col class="col_description"/>
 	<col class="col_shorttype"/>
 	<thead><tr>
 		<th></th>
 		<th>ID</th>
-		<th colspan="2">Type</th>
+		<th id="th_longtype" colspan="2">Type</th>
 		<th>Name</th>
-		<th>Description</th>
-		<th>Type</th>
+		<th id="th_description">Description</th>
+		<th id="th_shorttype">Type</th>
 	</tr></thead>
 	<tbody id="component_table">
 		<!-- %s/\v^(\w*)\t([^\t]*)\t([^\t]*)\t(\w*)\t(\w*)/<tr><td>\1<\/td><td>\2<\/td><td>\3<\/td><td>\4<\/td><td>\5<\/td><\/tr> -->
