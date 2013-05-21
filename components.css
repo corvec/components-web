@@ -107,13 +107,15 @@ border-top:1px solid #015DE6;color:#fff;text-shadow:0 1px 1px #333;}
 	#main .content p input[type=text],
 	#main .content p input[type=password],
 	#main .content p select {width:60%;}
-	#iphone_btn { display: block;}
+	#iphone_btn { display: block; text-align: center !important;}
 }
 
 /* Custom, for the Component Engine: */
-#iphone_btn { display: none; text-align: center !important; }
+@media only screen and (min-width: 1024px) {
+	#iphone_btn { display: none; }
+	.col_description { visibility: visible !important; }
+	.col_power { visibility: visible !important; }
+	.col_longtype {visibility: visible !important; }
+	.col_shorttype { visibility: collapse !important; }
+}
 #search_btn { width: 75% !important;}
-.col_longtype {visibility: collapse !important; }
-.col_power {visibility: collapse !important; }
-.col_description { visibility: visible; }
-
