@@ -94,6 +94,9 @@ border-top:1px solid #015DE6;color:#fff;text-shadow:0 1px 1px #333;}
 /* All portable */
 @media only screen and (max-device-width: 1024px) {
 	#sidebar {overflow:scroll;} /* Sidebar is only scrollable in portable devices, you can change that */
+	#iphone_btn { display: block; text-align: center !important;}
+	#search_lbl { visibility: collapse; width: 1% !important;  }
+	#search { text-align: left !important; width: 90% !important; }
 }
 
 
@@ -107,15 +110,18 @@ border-top:1px solid #015DE6;color:#fff;text-shadow:0 1px 1px #333;}
 	#main .content p input[type=text],
 	#main .content p input[type=password],
 	#main .content p select {width:60%;}
-	#iphone_btn { display: block; text-align: center !important;}
+}
+
+@media only screen and (min-width: 769px) {
+	.col_power { visibility: visible !important; }
+	.col_longtype {visibility: visible !important; }
+	.col_shorttype {visibility: collapse !important; }
+}
+
+@media only screen and (min-width: 1025px) {
+	#iphone_btn { display: none; }
+	.col_description { visibility: visible !important; }
 }
 
 /* Custom, for the Component Engine: */
-@media only screen and (min-width: 1024px) {
-	#iphone_btn { display: none; }
-	.col_description { visibility: visible !important; }
-	.col_power { visibility: visible !important; }
-	.col_longtype {visibility: visible !important; }
-	.col_shorttype { visibility: collapse !important; }
-}
 #search_btn { width: 75% !important;}
